@@ -15,13 +15,14 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  /*Font*/
   color: black;
   font-size: 100px;
   font-weight: 700;
 
   /*Position of word*/
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 30%;
 
   /*Color of the Vent title background*/
@@ -32,7 +33,6 @@
 
 /*ORIGINS*/
 #origins-title {
-  height: 100%;
   margin: 0px;
 
   /*Font*/
@@ -46,8 +46,6 @@
   /*How it is when it starts*/
   top: 0px;
   left: 0px;
-  /*padding-left: 650px;
-  padding-top: 200px;*/
 
   background-color: black;
 }

@@ -10,12 +10,20 @@ $("#vent-title").hover(function() {
 });
 
 function animateSplashScreen() {
-  var topPlacement = '40%'
-  var leftPlacement = '50%'
+  // Sets the css.style left and top accordingly to the screen size
+  var halfScreenWidth = $(window).width() / 2;
+  var halfScreenHeight = $(window).height() / 2;
+  var ventTitleWidth = document.getElementById('vent-title').offsetWidth;
+  var originsTitleWidth = document.getElementById('vent-title').offsetWidth;  
+
+  var leftPlacement = halfScreenWidth - 60 + 'px';
+  var topPlacement = '45%';
 
   // For animating the splash screen
   $('#origins-title-text').animate({opacity: '1.0'}, {duration: 2000, complete: function() {
-    checkSize();
+    // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
+    // checkSize would incorrectly animate origins, so animateCheckSize is called instead
+    animateCheckSize();
     $('#origins-title').animate({
       top: topPlacement, 
       left: leftPlacement, 
@@ -26,6 +34,22 @@ function animateSplashScreen() {
       margin: '0px',
       width: '400px', 
       height: '136px'}, 
-      1000)
+      {duration: 1000, complete: function() {
+        checkSize();
+      }});
   }});
+}
+
+function animateCheckSize() {
+  // Sets the splash screen height to the height of the window screen
+  document.getElementById('splash-screen-section').style.height = $(window).height() + 'px';
+
+  var halfScreenWidth = $(window).width() / 2;
+  var halfScreenHeight = $(window).height() / 2;
+  var ventTitleWidth = document.getElementById('vent-title').offsetWidth;
+  var originsTitleWidth = document.getElementById('vent-title').offsetWidth;
+
+  // Sets the position of the title appropriately whenever screen is checked
+  // 90 is to center the title appropriately
+  document.getElementById('vent-title').style.left = halfScreenWidth - (ventTitleWidth + 90) + 'px';
 }
