@@ -6,12 +6,14 @@
 
 $(document).ready(function() {
   console.log("Document ready");
+  checkAboutUsSize();
   initialOriginsPos();
   animateSplashScreen();
 });
 
 // Whenever window sizes changes, checks the size to see if in different media sizes
 $(window).resize(checkSize);
+$(window).resize(checkAboutUsSize);
 
 function initialOriginsPos() {
   // To center the Origins before the animation happens
@@ -40,4 +42,17 @@ function checkSize() {
   // 90 and 60 are numbers to center the title appropriately
   document.getElementById('vent-title').style.left = halfScreenWidth - (ventTitleWidth + 90) + 'px';
   document.getElementById('origins-title').style.left = halfScreenWidth - 60 +'px';
+}
+
+function checkAboutUsSize() {
+  // Sets the about us height to the height of the window screen
+  document.getElementById('about-us-section').style.height = $(window).height() + 'px';
+
+  var halfScreenWidth = $(window).width() / 2;
+  var halfScreenHeight = $(window).height() / 2;
+  var aboutUsPicturesDivWidth = document.getElementById('about-us-pictures-div').offsetWidth;
+  var aboutUsPicturesDivHeight = document.getElementById('about-us-pictures-div').offsetHeight;
+
+  document.getElementById('about-us-pictures-div').style.left = halfScreenWidth - (aboutUsPicturesDivWidth / 2) + 'px';
+  document.getElementById('about-us-pictures-div').style.top = halfScreenHeight - (aboutUsPicturesDivHeight / 2) + 'px';
 }
