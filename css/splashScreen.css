@@ -54,3 +54,29 @@
 #origins-title-text {
   opacity: 0.0;
 }
+
+@media screen and (max-width: 800px) {
+  #vent-title {
+    font-size: 50px;
+    top: 50%;
+  }
+
+  #origins-title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #vent-title {
+    font-size: 35px;
+    top: 50%;
+  }
+
+  #origins-title {
+    font-size: 35px;
+  }
+}
+
+
+
+

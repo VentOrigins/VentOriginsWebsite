@@ -16,28 +16,82 @@ function animateSplashScreen() {
   var ventTitleWidth = document.getElementById('vent-title').offsetWidth;
   var originsTitleWidth = document.getElementById('vent-title').offsetWidth;  
 
-  var leftPlacement = halfScreenWidth - 60 + 'px';
-  var topPlacement = '45%';
+  
 
-  // For animating the splash screen
-  $('#origins-title-text').animate({opacity: '1.0'}, {duration: 2000, complete: function() {
-    // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
-    // checkSize would incorrectly animate origins, so animateCheckSize is called instead
-    animateCheckSize();
-    $('#origins-title').animate({
-      top: topPlacement, 
-      left: leftPlacement, 
-      paddingTop: '0px', 
-      paddingLeft: '15px', 
-      paddingRight: '15px', 
-      paddingBottom: '6px', 
-      margin: '0px',
-      width: '400px', 
-      height: '136px'}, 
-      {duration: 1000, complete: function() {
-        checkSize();
-      }});
-  }});
+  if ($(window).width() > 800) {
+    var leftPlacement = halfScreenWidth - 60 + 'px';
+    var topPlacement = '45%';
+    
+    // For animating the splash screen
+    $('#origins-title-text').animate({opacity: '1.0'}, {duration: 2000, complete: function() {
+      // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
+      // checkSize would incorrectly animate origins, so animateCheckSize is called instead
+      animateCheckSize();
+      $('#origins-title').animate({
+        top: topPlacement, 
+        left: leftPlacement, 
+        paddingTop: '0px', 
+        paddingLeft: '15px', 
+        paddingRight: '15px', 
+        paddingBottom: '6px', 
+        margin: '0px',
+        width: '400px', 
+        height: '136px'}, 
+        {duration: 1000, complete: function() {
+          checkSize();
+        }});
+    }});
+  }
+
+  else if ($(window).width() <= 800 && $(window).width() > 500) {
+    var leftPlacement = halfScreenWidth - 30 + 'px';
+    var topPlacement = '50%';
+
+    // For animating the splash screen
+    $('#origins-title-text').animate({opacity: '1.0'}, {duration: 2000, complete: function() {
+      // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
+      // checkSize would incorrectly animate origins, so animateCheckSize is called instead
+      animateCheckSize();
+      $('#origins-title').animate({
+        top: topPlacement, 
+        left: leftPlacement, 
+        paddingTop: '0px', 
+        paddingLeft: '15px', 
+        paddingRight: '15px', 
+        paddingBottom: '6px', 
+        margin: '0px',
+        width: '200px', 
+        height: '68px'}, 
+        {duration: 1000, complete: function() {
+          checkSize();
+        }});
+    }});
+  }
+
+  else if ($(window).width() <= 500) {
+    var leftPlacement = halfScreenWidth - 10 + 'px';
+    var topPlacement = '50%';
+
+    // For animating the splash screen
+    $('#origins-title-text').animate({opacity: '1.0'}, {duration: 2000, complete: function() {
+      // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
+      // checkSize would incorrectly animate origins, so animateCheckSize is called instead
+      animateCheckSize();
+      $('#origins-title').animate({
+        top: topPlacement, 
+        left: leftPlacement, 
+        paddingTop: '0px', 
+        paddingLeft: '15px', 
+        paddingRight: '15px', 
+        paddingBottom: '2px', 
+        margin: '0px',
+        width: '140px', 
+        height: '50px'}, 
+        {duration: 1000, complete: function() {
+          checkSize();
+        }});
+    }});
+  }
 }
 
 function animateCheckSize() {
@@ -51,5 +105,16 @@ function animateCheckSize() {
 
   // Sets the position of the title appropriately whenever screen is checked
   // 90 is to center the title appropriately
-  document.getElementById('vent-title').style.left = halfScreenWidth - (ventTitleWidth + 90) + 'px';
+  if ($(window).width() > 800) {
+    document.getElementById('vent-title').style.left = halfScreenWidth - (ventTitleWidth + 90) + 'px';
+  }
+  else if ($(window).width() <= 800 && $(window).width() > 500) {
+    document.getElementById('vent-title').style.left = halfScreenWidth - (ventTitleWidth + 45) + 'px';
+  }
+  else if ($(window).width() <= 500) {
+    document.getElementById('vent-title').style.left = halfScreenWidth - (ventTitleWidth + 30) + 'px';
+  }
 }
+
+
+
