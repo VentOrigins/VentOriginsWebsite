@@ -83,7 +83,7 @@ function animateSplashScreen() {
         paddingTop: '0px', 
         paddingLeft: '15px', 
         paddingRight: '15px', 
-        paddingBottom: '2px', 
+        paddingBottom: '0px', 
         margin: '0px',
         width: '140px', 
         height: '50px'}, 

@@ -38,8 +38,8 @@ function initialOriginsPos() {
   }
 
   else if ($(window).width() <= 500) {
-    document.getElementById('origins-title').style.paddingLeft = (halfScreenWidth - 80) + 'px';
-    document.getElementById('origins-title').style.paddingRight = (halfScreenWidth - 80) + 'px';
+    document.getElementById('origins-title').style.paddingLeft = (halfScreenWidth - 65) + 'px';
+    document.getElementById('origins-title').style.paddingRight = (halfScreenWidth - 65) + 'px';
     document.getElementById('origins-title').style.paddingTop = (halfScreenHeight - 25) + 'px';
     document.getElementById('origins-title').style.paddingBottom = (halfScreenHeight) + 'px';
   }

@@ -35,7 +35,6 @@ nav ul {
 
   margin-top: 30px;
   margin-left: 20px;
-  margin-right: 20px;
 
   display: inline-block;
   /*Do not show bullet points*/
@@ -63,10 +62,62 @@ nav img {
   position: absolute;
   margin-top: 15px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 /*Used here in order to act as a ul for the li*/
 #logo-with-title {
   margin-left: 30px;
   margin-right: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    padding-left: 0px;
+  }
+
+  nav ul {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    font-size: 16px;
+    padding-left: 0px;
+  }
+
+  nav li {
+    margin-left: 90px;
+  }
+
+  nav ul {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #logo-with-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  nav li {
+    margin-left: 80px;
+  }
+
+  nav ul {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
