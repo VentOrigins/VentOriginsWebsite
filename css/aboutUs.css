@@ -13,13 +13,16 @@
 }
 
 #about-us-title {
+  padding-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+
   /*Font*/
   text-align: center;
   font-size: 40px;
   font-weight: 900;
 
   position: relative;
-  top: 80px;
 }
 
 #about-us-pictures-div {

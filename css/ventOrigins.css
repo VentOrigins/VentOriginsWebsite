@@ -45,3 +45,8 @@ body {
   position: relative;
   top: 80px;
 }
+
+.scroll-to-section-css {
+  position: relative;
+  top: -80px;
+}

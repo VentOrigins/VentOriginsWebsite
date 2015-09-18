@@ -13,13 +13,13 @@ $("#homeNav").click(function() {
 
 $("#aboutNav").click(function() {
   $('html, body').animate({
-    scrollTop: $("#about-us-section").offset().top
+    scrollTop: $("#about-us-section-scroll").offset().top
   }, 500);
 });
 
 $("#projectsNav").click(function() {
   $('html, body').animate({
-      scrollTop: $("#projects-section").offset().top
+      scrollTop: $("#projects-section-scroll").offset().top
   }, 500);
 });
 

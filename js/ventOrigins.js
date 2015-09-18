@@ -88,9 +88,9 @@ function checkAboutUsSize() {
   
   if ($(window).width() > 996) {
     // Sets the about us height to the height of the window screen
-    document.getElementById('about-us-section').style.height = $(window).height() + 'px';
+    document.getElementById('about-us-section').style.height = ($(window).height() - 80) + 'px';
     document.getElementById('about-us-pictures-div').style.left = halfScreenWidth - (aboutUsPicturesDivWidth / 2) + 'px';
-    document.getElementById('about-us-pictures-div').style.top = halfScreenHeight - (aboutUsPicturesDivHeight / 2) + 'px';
+    document.getElementById('about-us-pictures-div').style.top = (halfScreenHeight - (aboutUsPicturesDivHeight / 2) - 80) + 'px';
     document.getElementById('about-us-pictures-div').style.marginTop = '0px';
   }
   else if ($(window).width() <= 996) {
@@ -98,7 +98,7 @@ function checkAboutUsSize() {
     document.getElementById('about-us-section').style.height = 'auto';
     document.getElementById('about-us-pictures-div').style.left = halfScreenWidth - (aboutUsPicturesDivWidth / 2) + 'px';
     document.getElementById('about-us-pictures-div').style.top = '0px';
-    document.getElementById('about-us-pictures-div').style.marginTop = '100px';
+    document.getElementById('about-us-pictures-div').style.marginTop = '50px';
   }
 }
 
