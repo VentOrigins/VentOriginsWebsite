@@ -4,20 +4,24 @@
     By Adrian Mandee and Randy Truong
     ========================================================================== */
 
+// When Vent title is hovered over
 $("#vent-title").hover(function() {
   // $('#vent-title').animate({boxShadow:})
-  console.log(document.getElementById('vent-title').style.boxShadow);
 });
 
+/*  =============================================================================
+    Animstes the splash screen when the page initially loads
+
+    @param    none
+    @return   none
+    ========================================================================== */
 function animateSplashScreen() {
-  // Sets the css.style left and top accordingly to the screen size
   var halfScreenWidth = $(window).width() / 2;
   var halfScreenHeight = $(window).height() / 2;
   var ventTitleWidth = document.getElementById('vent-title').offsetWidth;
   var originsTitleWidth = document.getElementById('vent-title').offsetWidth;  
 
-  
-
+  // Adjusts the screen accordingly to the different screen size
   if ($(window).width() > 800) {
     var leftPlacement = halfScreenWidth - 60 + 'px';
     var topPlacement = '45%';
@@ -38,11 +42,11 @@ function animateSplashScreen() {
         width: '400px', 
         height: '136px'}, 
         {duration: 1000, complete: function() {
-          checkSize();
+          checkSplashScreenSize();
         }});
     }});
   }
-
+  // When the screen size is between 500 and 800
   else if ($(window).width() <= 800 && $(window).width() > 500) {
     var leftPlacement = halfScreenWidth - 30 + 'px';
     var topPlacement = '50%';
@@ -63,11 +67,11 @@ function animateSplashScreen() {
         width: '200px', 
         height: '68px'}, 
         {duration: 1000, complete: function() {
-          checkSize();
+          checkSplashScreenSize();
         }});
     }});
   }
-
+  // When the screen size is less than 500
   else if ($(window).width() <= 500) {
     var leftPlacement = halfScreenWidth - 10 + 'px';
     var topPlacement = '50%';
@@ -88,12 +92,18 @@ function animateSplashScreen() {
         width: '140px', 
         height: '50px'}, 
         {duration: 1000, complete: function() {
-          checkSize();
+          checkSplashScreenSize();
         }});
     }});
   }
 }
 
+/*  =============================================================================
+    The check size for the animation portion of the splash screen
+
+    @param    none
+    @return   none
+    ========================================================================== */
 function animateCheckSize() {
   // Sets the splash screen height to the height of the window screen
   document.getElementById('splash-screen-section').style.height = $(window).height() + 'px';

@@ -4,9 +4,10 @@
     By Adrian Mandee and Randy Truong
     ========================================================================== */
 
+/*The entire contact footer div*/
 footer {
+  /*Takes up the entire 100% of the screen*/
   width: 60%;
-
   padding-left: 20%;
   padding-right: 20%;
 
