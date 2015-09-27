@@ -151,6 +151,13 @@ function checkAboutUsSize() {
   }
 }
 
+function checkApplicationSize() {
+  var halfScreenWidth = $(window).width() / 2;
+  var halfScreenHeight = $(window).height() / 2;
+
+  
+}
+
 
 
 
