@@ -49,11 +49,18 @@ footer {
   /*Font*/
   font-size: 25px;
   color: #CCCCCC;
+
+  /*For Transitions/Animations*/
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  -moz-transition: background-color 0.4s, color 0.4s;
+  -0-transition: background-color 0.4s, color 0.4s;
+  -ms-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
 }
 
-#icons-div-footer .fa:hover{
+#icons-div-footer .fa:hover {
   color: white;
-  background-color: #444444;
+  background-color: #555555;
 }
 
 #copyright-div-footer {

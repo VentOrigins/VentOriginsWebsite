@@ -39,6 +39,8 @@ body {
   /*Spacing*/
   margin: 0px;
   padding: 0px;
+
+  overflow-x: hidden;
 }
 
 .below-nav-bar {

@@ -11,6 +11,8 @@ nav {
 
   /*Keeps the nav bar with the screen*/
   position: fixed;
+  padding: 0px;
+  margin: 0px;
   padding-left: 100px;
   padding-right: 100px;
 
@@ -27,26 +29,30 @@ nav {
 
 /*The list of titles in the nav bar*/
 nav ul {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
   margin: 0px;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  /*padding-top: 30px;*/
-
-  margin-top: 30px;
-  margin-left: 20px;
-
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  position: relative;
   display: inline-block;
-  /*Do not show bullet points*/
   list-style: none;
+
+  /*For Transitions/Animations*/
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -0-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
+/*Animation for when hovering over the div*/
 nav ul:hover {
-  /*text-decoration: underline;*/
-  border-bottom-left-radius: 40px;
-  border-bottom-style: solid;
-
-  border-bottom-width: 1px;
+  background-color: #444444;
 }
 
 nav li {
@@ -66,9 +72,8 @@ nav img {
 }
 
 /*Used here in order to act as a ul for the li*/
-#logo-with-title {
-  margin-left: 30px;
-  margin-right: 50px;
+.logo-with-title {
+  margin-left: 100px;
 }
 
 @media screen and (max-width: 800px) {
@@ -91,10 +96,6 @@ nav img {
     padding-left: 0px;
   }
 
-  nav li {
-    margin-left: 90px;
-  }
-
   nav ul {
     padding-left: 10px;
     padding-right: 10px;
@@ -109,8 +110,9 @@ nav img {
 }
 
 @media screen and (max-width: 330px) {
-  nav li {
-    margin-left: 80px;
+  nav {
+    font-size: 16px;
+    padding-left: 0px;
   }
 
   nav ul {
@@ -119,5 +121,9 @@ nav img {
 
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  nav img {
+    margin-left: 5px;
   }
 }

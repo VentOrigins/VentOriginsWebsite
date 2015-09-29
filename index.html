@@ -33,10 +33,11 @@
 
   <!-- Top nav bar -->
   <nav>
-    <img id='homeNav' style='cursor:pointer' src='img/VentOriginsLogoWhite.png'></a>
     <li>
-      <ul id='logo-with-title' style='cursor:pointer'></ul>
-      <ul id='aboutNav' style='cursor:pointer'>About</ul>
+      <img id='homeNav' style='cursor:pointer' src='img/VentOriginsLogoWhite.png'></a>
+
+      <!-- <ul id='logo-with-title' style='cursor:pointer'></ul> -->
+      <ul id='aboutNav' class='logo-with-title' style='cursor:pointer'>About</ul>
       <ul id='projectsNav' style='cursor:pointer'>Projects</ul>
       <ul id='contactNav' style='cursor:pointer'>Contact</ul>
     <li>
@@ -81,24 +82,26 @@
   <div id='projects-section'>
     <div id='projects-section-scroll' class='scroll-to-section-css'></div>
     <div id='projects-section-title'>Our Applications</div>
-      <div class='project-tile'>
-        <div class='project-inner-tile'></div>
+    <div id='application-1'>
+      <div id='application-2'>
+        <div id='application-3'>
+          <div class='pages'>
+            <div id='application-slide-1' class='page'>
+              <button class='prev-slide-button' onclick='prevSlide()'></button>
+              <button class='next-slide-button' onclick='nextSlide()'></button>
+            </div>
+            <div id='application-slide-2' class='page'>
+              <button class='prev-slide-button' onclick='prevSlide()'></button>
+              <button class='next-slide-button' onclick='nextSlide()'></button>
+            </div>
+            <div id='application-slide-3' class='page'>
+              <button class='prev-slide-button' onclick='prevSlide()'></button>
+              <button class='next-slide-button' onclick='nextSlide()'></button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class='project-tile'>
-        <div class='project-inner-tile'></div>
-      </div>
-      <div class='project-tile'>
-        <div class='project-inner-tile'></div>
-      </div>
-      <div class='project-tile'>
-        <div class='project-inner-tile'></div>
-      </div>
-      <div class='project-tile'>
-        <div class='project-inner-tile'></div>
-      </div>
-      <div class='project-tile'>
-        <div class='project-inner-tile'></div>
-      </div>
+    </div>
   </div>
 
   <!-- Contact footer -->
@@ -128,6 +131,7 @@
   <script type="text/javascript" src="js/ventOrigins.js"></script>
   <script type="text/javascript" src="js/nav.js"></script>
   <script type="text/javascript" src="js/splashScreen.js"></script>
+  <script type="text/javascript" src="js/applications.js"></script>
 
 </div>
 </body>
