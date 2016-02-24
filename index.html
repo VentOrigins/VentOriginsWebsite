@@ -10,7 +10,14 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width" />
+  <!-- <meta name="viewport" content="width=device-width" /> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>VentOrigins</title>
+
+  <!-- Tab icon -->
+  <link rel="shortcut icon" type="image/png" href="img/vo_logo3.ico?">
 
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -34,12 +41,14 @@
   <!-- Top nav bar -->
   <nav>
     <li>
-      <img id='homeNav' style='cursor:pointer' src='img/VentOriginsLogoWhite.png'></a>
+      <img id='homeNav' style='cursor:pointer' src='img/vo_logo3.png'></a>
 
       <!-- <ul id='logo-with-title' style='cursor:pointer'></ul> -->
-      <ul id='aboutNav' class='logo-with-title' style='cursor:pointer'>About</ul>
-      <ul id='projectsNav' style='cursor:pointer'>Projects</ul>
-      <ul id='contactNav' style='cursor:pointer'>Contact</ul>
+      <div class='nav-text-div'>
+        <ul id='projectsNav' class='logo-with-title' style='cursor:pointer'>Apps</ul>
+        <ul id='aboutNav' style='cursor:pointer'>About</ul>
+        <ul id='contactNav' style='cursor:pointer'>Contact</ul>
+      </div>
     <li>
   </nav>
 
@@ -52,55 +61,158 @@
       <div id='origins-title'>
         <div id='origins-title-text'>ORIGINS</div>
       </div>
+      <div class='splash-img'></div>
     <!-- </div> -->
-  </div>
-
-  <!-- About -->
-  <div id='about-us-section'>
-    <div id='about-us-section-scroll' class='scroll-to-section-css'></div>
-    <div id='about-us-title'>The Team</div>
-    <div id='about-us-pictures-div'> 
-      <div class='about-us-pictures'>
-        <img src="img/chiao.jpg">
-        <div class='about-us-names'>Kevin Chiao</div>
-        Junior Managing Director
-      </div>
-      <div class='about-us-pictures'>
-        <img src="img/mandee.jpg">
-        <div class='about-us-names'>Adrian Mandee</div>
-        Chief Executive Officer
-      </div>
-      <div class='about-us-pictures'>
-        <img src="img/truong.jpg">
-        <div class='about-us-names'>Randy Truong</div>
-        Executive Chairman
-      </div>
-    </div>
   </div>
 
   <!-- Project -->
   <div id='projects-section'>
     <div id='projects-section-scroll' class='scroll-to-section-css'></div>
-    <div id='projects-section-title'>Our Applications</div>
-    <div id='application-1'>
-      <div id='application-2'>
-        <div id='application-3'>
+<!--     <div id='projects-section-title'>Our Applications</div>
+ -->   
+    <!-- <div id='application-1'> -->
+      <!-- <div id='application-2'> -->
+        <!-- <div id='application-3'> -->
           <div class='pages'>
             <div id='application-slide-1' class='page'>
-              <button class='prev-slide-button' onclick='prevSlide()'></button>
-              <button class='next-slide-button' onclick='nextSlide()'></button>
+              <button class='prev-slide-button' onclick='prevSlide()'><i class="fa fa-angle-left"></i></button>
+              <button class='next-slide-button' onclick='nextSlide()'><i class="fa fa-angle-right"></i></button>
+              <div class='application-image'>
+                <img src="img/SirPranceBanner.jpg">
+              </div>
+              <div class='application-description'>
+                <div class='application-description-content'>
+                  <h1>Sir Prance</h1> is a mobile game built on both the Android and IOS devices. We went through the entire process from downloading Android Studios and XCode to uploading the game onto the app stores. Check out Sir Prance on your device's app store. Download and play!
+                </div>
+                <div class='download-buttons'>
+                  <a href='https://itunes.apple.com/bt/app/sir-prance/id1065679062?mt=8' target="_blank"><img class='download-button-img' src='img/Download_on_the_App_Store_Badge.svg.png'></a>
+                  <a href='https://play.google.com/store/apps/details?id=com.Mandee.Charger&hl=en' target="_blank"><img class='download-button-img' src='img/Android-app-on-google-play.svg.png'></a>
+                </div>
+              </div>
             </div>
             <div id='application-slide-2' class='page'>
-              <button class='prev-slide-button' onclick='prevSlide()'></button>
-              <button class='next-slide-button' onclick='nextSlide()'></button>
+              <button class='prev-slide-button' onclick='prevSlide()'><i class="fa fa-angle-left"></i></button>
+              <button class='next-slide-button' onclick='nextSlide()'><i class="fa fa-angle-right"></i></button>
+              <div class='application-image'>
+                <img src="img/ventdj-min.png">
+              </div>
+              <div class='application-description'>
+                <div class='application-description-content'>
+                  <h1>Vent DJ</h1> is an innovative way to listen to music, allowing you to create a playlist that consists of Youtube videos and SoundCloud tracks. Start your search with your favorite songs. Add them to your queue by clicking the title, and enjoy your newly generated playlist.
+                </div>
+                <div class='project-url-link'><a href='http://ventdj.com' target="_blank"> <i class="fa fa-home"></i> </a></div>
+              </div>
             </div>
             <div id='application-slide-3' class='page'>
-              <button class='prev-slide-button' onclick='prevSlide()'></button>
-              <button class='next-slide-button' onclick='nextSlide()'></button>
+              <button class='prev-slide-button' onclick='prevSlide()'><i class="fa fa-angle-left"></i></button>
+              <button class='next-slide-button' onclick='nextSlide()'><i class="fa fa-angle-right"></i></button>
+              <div class='application-image'>
+                <img src="img/VentTag.png">
+              </div>
+              <div class='application-description'>
+                <div class='application-description-content'>
+                  <h1>Vent Tag</h1> builds upon Spotify by adding hashtags to Spotify songs. This adds new ways to store and share music. Search a song, add hashtags to them, and now the songs are affiliated with that hashtag. Users can input a '&#35;' and then the hashtag query to build a Spotify playlist with songs containing those hashtags. This was the first project Vent Origins worked on and was not the last.
+                </div>
+                <div class='project-url-link'><a href='http://ventorigins.github.io' target="_blank"> <i class="fa fa-home"></i> </a></div>
+              </div>
             </div>
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+
+    <div id='projects-section-current-slide'> 
+      <div id='dot-slide-1' class='dot-slide' onclick='goToClickedSlide(this)'></div>
+      <div id='dot-slide-2' class='dot-slide' onclick='goToClickedSlide(this)'></div>
+      <div id='dot-slide-3' class='dot-slide' onclick='goToClickedSlide(this)'></div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div id='about-us-section'>
+    <div id='about-us-section-scroll' class='scroll-to-section-css'></div>
+
+    <div id='about-us-title'>About</div>
+
+    <div class='about-us-overall-description'>
+      <h1>Vent Origins</h1> was founded by students from different schools dedicated in making a wide variety of applications. We are developers, designers, and engineers who all came up with different ideas that capture our diverse interests for growth and development. We started prototyping Sir Prance during 2014, and along the way we also made other applications that appeal to our interests. Now that Sir Prance is live on the IOS and Android app stores, we hope to continue our journey of ideas and growth.
+    </div>
+
+    <div class='about-us-pictures-div'> 
+      <div class='about-us-pictures'>
+        <div id='adrian-mandee-div' class='about-us-img-div'>
+          <!-- <img src="img/mandee.jpg"> -->
+          <div class='about-us-pictures-overlay'></div>
+          <div class='about-us-text-and-icons'>
+            <div class='about-personal-links'>
+              <div class='link-icon'> <a href="https://www.github.com/Amandee" target="_blank"> <i class="fa fa-github"></i></a></div>
+              <div class='link-icon'> <a href="https://www.linkedin.com/in/adrianmandee" target="_blank"> <i class="fa fa-linkedin-square"></i></a></div>
+            </div>
+            <div class='about-us-names'>Adrian Mandee</div>
           </div>
         </div>
       </div>
+
+      <div class='about-us-pictures'>
+        <div id='randy-truong-div' class='about-us-img-div'>
+          <!-- <img src="img/truong-1.jpg"> -->
+          <div class='about-us-pictures-overlay'></div>
+          <div class='about-us-text-and-icons'>
+            <div class='about-personal-links'>
+              <div class='link-icon'> <a href="http://www.randytruong.com/" target="_blank"> <i class="fa fa-home"></i></a></div>
+              <div class='link-icon'> <a href="https://www.github.com/rtruo001" target="_blank"> <i class="fa fa-github"></i></a></div>
+              <div class='link-icon'> <a href="https://www.linkedin.com/in/randytruong" target="_blank"> <i class="fa fa-linkedin-square"></i></a></div>
+            </div>
+            <div class='about-us-names'>Randy Truong</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class='about-us-pictures-div'> 
+  
+      <div class='about-us-pictures'>
+        <div id='gerard-liu-div' class='about-us-img-div'>
+          <!-- <img src="img/truong.jpg"> -->
+          <div class='about-us-pictures-overlay'></div>
+          <div class='about-us-text-and-icons'>
+            <div class='about-personal-links'>
+              <div class='link-icon'> <a href="https://www.linkedin.com/in/gerardliu" target="_blank"> <i class="fa fa-linkedin-square"></i></a></div>
+              <div class='link-icon'> <a href="https://www.facebook.com/gerard.liu" target="_blank"> <i class="fa fa-facebook-square"></i></a></div>
+            </div>
+            <div class='about-us-names'>Gerard Liu</div>
+         </div>
+        </div>
+      </div>
+
+      <div class='about-us-pictures'>
+        <div id='kevin-chiao-div' class='about-us-img-div'>
+          <!-- <img src="img/chiao.jpg"> -->
+          <div class='about-us-pictures-overlay'></div>
+          <div class='about-us-text-and-icons'>
+            <div class='about-personal-links'>
+              <div class='link-icon'> <a href="https://www.linkedin.com/in/kchiao1994" target="_blank"> <i class="fa fa-linkedin-square"></i></a></div>
+              <div class='link-icon'> <a href="https://www.facebook.com/kchiao1" target="_blank"> <i class="fa fa-facebook-square"></i></a></div>
+            </div>
+            <div class='about-us-names'>Kevin Chiao</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class='about-us-pictures'>
+        <div id='kristopher-luong-div' class='about-us-img-div'>
+          <!-- <img src="img/truong.jpg"> -->
+          <div class='about-us-pictures-overlay'></div>
+          <div class='about-us-text-and-icons'>
+            <div class='about-personal-links'>
+              <div class='link-icon'> <a href="https://www.soundcloud.com/thefoxen" target="_blank"> <i class="fa fa-soundcloud"></i></a></div>
+            </div>
+            <div class='about-us-names'>Kristopher Luong</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -114,18 +226,19 @@
         Email: Ventorigins@gmail.com
       </div>
       <div id='icons-div-footer'>
-        <div> <a href="http://www.facebook.com/"> <i class="fa fa-facebook-official"></i></a></div>
-        <div> <a href="http://www.twitter.com/"> <i class="fa fa-twitter"></i></a></div>
-        <div> <a href="https://github.com/ventorigins"> <i class="fa fa-github"></i></a></div>
+        <div class='icon-individual-div'> <a href="http://www.facebook.com/ventorigins" target="_blank"> <i class="fa fa-facebook-official"></i></a></div>
+        <div class='icon-individual-div'> <a href="http://www.twitter.com/ventorigins" target="_blank"> <i class="fa fa-twitter"></i></a></div>
+        <div class='icon-individual-div'> <a href="https://github.com/ventorigins" target="_blank"> <i class="fa fa-github"></i></a></div>
       </div>
     </div>
     <div id='copyright-div-footer'>
-      © 2015 Copyright Vent Origins
+      © 2016 Copyright Vent Origins
     </div>
   </footer>
 
   <!-- JQUERY -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+  <script type='text/javascript' src='js/jquery-2.2.0.min.js'></script>
 
   <!-- Scripts -->
   <script type="text/javascript" src="js/ventOrigins.js"></script>

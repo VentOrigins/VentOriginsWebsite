@@ -7,32 +7,35 @@
 /*The entire contact footer div*/
 footer {
   /*Takes up the entire 100% of the screen*/
-  width: 60%;
+  width: 100%;
   padding-left: 20%;
   padding-right: 20%;
 
-  background-color: black;
+  background-color: #4A4A4A;
 
-  box-shadow: 0px -1px 10px black;
+  /*box-shadow: 0px -1px 10px black;*/
 }
 
 #contact-title-footer {
   padding-top: 10px;
   padding-bottom: 20px;
 
-  color: white;
+  color: #DDDDDD;
   font-size: 22px;
   font-weight: 900;
 }
 
 #contact-email-footer {
-  color: #CCCCCC;
+  color: #DDDDDD;
   font-size: 18px;
 }
 
 #icons-div-footer {
   position: relative;
-  display: inline-flex;
+}
+
+.icon-individual-div {
+  display: inline-block;
 }
 
 #icons-div-footer .fa{
@@ -60,7 +63,7 @@ footer {
 
 #icons-div-footer .fa:hover {
   color: white;
-  background-color: #555555;
+  background-color: #232323;
 }
 
 #copyright-div-footer {
@@ -76,8 +79,6 @@ footer {
 
 @media screen and (max-width: 996px) {
     footer {
-      width: 90%;
-
       padding-left: 5%;
       padding-right: 5%; 
     }

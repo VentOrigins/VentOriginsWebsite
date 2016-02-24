@@ -21,17 +21,23 @@ function prevSlide() {
   divWidth = $(window).width();
   var leftAttr = $('.pages').css('left');
   var slide1 = '0px';
-  var slide2 = -1 * divWidth + 'px';
-  var slide3 = -2 * divWidth + 'px';
+  var slide2 = -1 * divWidth + 'px'; // -100%
+  var slide3 = -2 * divWidth + 'px'; // -200%
 
   if (leftAttr == slide1) {
     $('.pages').css('left', '-200%');
+    $('#dot-slide-1').css('background-color', 'white');
+    $('#dot-slide-3').css('background-color', 'black');
   }
   else if (leftAttr == slide2) {
     $('.pages').css('left', '0%');
+    $('#dot-slide-2').css('background-color', 'white');
+    $('#dot-slide-1').css('background-color', 'black');
   }
   else if (leftAttr == slide3) {
     $('.pages').css('left', '-100%');
+    $('#dot-slide-3').css('background-color', 'white');
+    $('#dot-slide-2').css('background-color', 'black');
   }
 }
 
@@ -44,12 +50,40 @@ function nextSlide() {
   
   if (leftAttr == slide1) {
     $('.pages').css('left', '-100%');
+    $('#dot-slide-1').css('background-color', 'white');
+    $('#dot-slide-2').css('background-color', 'black');
   }
   else if (leftAttr == slide2) {
     $('.pages').css('left', '-200%');
+    $('#dot-slide-2').css('background-color', 'white');
+    $('#dot-slide-3').css('background-color', 'black');
   }
   else if (leftAttr == slide3) {
     $('.pages').css('left', '0%');
+    $('#dot-slide-3').css('background-color', 'white');
+    $('#dot-slide-1').css('background-color', 'black');
+  }
+}
+
+function goToClickedSlide(div) {
+  var divId = $(div).attr('id');
+  if (divId == 'dot-slide-1') {
+    $('.pages').css('left', '0%');
+    $('#dot-slide-1').css('background-color', 'black');
+    $('#dot-slide-2').css('background-color', 'white');
+    $('#dot-slide-3').css('background-color', 'white');
+  }
+  else if (divId == 'dot-slide-2') {
+    $('.pages').css('left', '-100%');
+    $('#dot-slide-1').css('background-color', 'white');
+    $('#dot-slide-2').css('background-color', 'black');
+    $('#dot-slide-3').css('background-color', 'white');
+  }
+  else if (divId == 'dot-slide-3') {
+    $('.pages').css('left', '-200%');
+    $('#dot-slide-1').css('background-color', 'white');
+    $('#dot-slide-2').css('background-color', 'white');
+    $('#dot-slide-3').css('background-color', 'black');
   }
 }
 

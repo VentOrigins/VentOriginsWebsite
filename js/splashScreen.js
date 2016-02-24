@@ -31,6 +31,8 @@ function animateSplashScreen() {
       // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
       // checkSize would incorrectly animate origins, so animateCheckSize is called instead
       animateCheckSize();
+      changeNavBarForAnimation();
+
       $('#origins-title').animate({
         top: topPlacement, 
         left: leftPlacement, 
@@ -39,9 +41,10 @@ function animateSplashScreen() {
         paddingRight: '15px', 
         paddingBottom: '6px', 
         margin: '0px',
-        width: '400px', 
-        height: '136px'}, 
+        width: '430px', 
+        height: '142px'}, 
         {duration: 1000, complete: function() {
+          changeOriginsBackground();
           checkSplashScreenSize();
         }});
     }});
@@ -56,6 +59,8 @@ function animateSplashScreen() {
       // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
       // checkSize would incorrectly animate origins, so animateCheckSize is called instead
       animateCheckSize();
+      changeNavBarForAnimation();
+
       $('#origins-title').animate({
         top: topPlacement, 
         left: leftPlacement, 
@@ -64,9 +69,10 @@ function animateSplashScreen() {
         paddingRight: '15px', 
         paddingBottom: '6px', 
         margin: '0px',
-        width: '200px', 
-        height: '68px'}, 
+        width: '230px', 
+        height: '74px'}, 
         {duration: 1000, complete: function() {
+          changeOriginsBackground();
           checkSplashScreenSize();
         }});
     }});
@@ -81,6 +87,8 @@ function animateSplashScreen() {
       // animateCheckSize is called instead of checkSize due to checkSize setting origins-title's css.style.left
       // checkSize would incorrectly animate origins, so animateCheckSize is called instead
       animateCheckSize();
+      changeNavBarForAnimation();
+
       $('#origins-title').animate({
         top: topPlacement, 
         left: leftPlacement, 
@@ -89,13 +97,36 @@ function animateSplashScreen() {
         paddingRight: '15px', 
         paddingBottom: '0px', 
         margin: '0px',
-        width: '140px', 
+        width: '170px', 
         height: '50px'}, 
         {duration: 1000, complete: function() {
+          changeOriginsBackground();
           checkSplashScreenSize();
         }});
     }});
   }
+}
+
+/*  =============================================================================
+    Changes the colors of the nav bar
+
+    @param    none
+    @return   none
+    ========================================================================== */
+function changeNavBarForAnimation() {
+  $('nav').css('background-color', 'white');
+  $('nav').css('color', '#999999');
+  $('nav').css('border-color', '#EEEEEE');
+}
+
+/*  =============================================================================
+    Change color of the background
+
+    @param    none
+    @return   none
+    ========================================================================== */
+function changeOriginsBackground() {
+  // $('#origins-title').css('background-color', 'transparent');
 }
 
 /*  =============================================================================

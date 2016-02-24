@@ -43,6 +43,10 @@ body {
   overflow-x: hidden;
 }
 
+#entire-webpage {
+  overflow-x: hidden;
+}
+
 .below-nav-bar {
   position: relative;
   top: 80px;
@@ -51,4 +55,11 @@ body {
 .scroll-to-section-css {
   position: relative;
   top: -80px;
+}
+
+/* Needed for the width to also including border and padding sizes */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
