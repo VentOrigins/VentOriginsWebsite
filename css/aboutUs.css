@@ -84,7 +84,8 @@
 /* These divs are used instead of the img because easier to manipulate a div with background instead of img */
 #adrian-mandee-div {
   background-image: url("../img/mandee-1.jpg");
-  background-position: center right;
+  background-size: 150% 200%;
+  background-position: center 15%;
 }
 
 #randy-truong-div {
